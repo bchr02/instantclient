@@ -1,0 +1,84 @@
+{
+	"folder": "instantclient",
+	"defaultversion": "v12",
+		"v12": {
+		"win32": {
+			"ia32": {
+				"basic": {
+					"fn": "instantclient-basic-nt-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/nt/instantclient/121020/instantclient-basic-nt-12.1.0.2.0.zip",
+					"cksum": "530881682"
+				},
+				"sdk": {
+					"fn": "instantclient-sdk-nt-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/nt/instantclient/121020/instantclient-sdk-nt-12.1.0.2.0.zip",
+					"cksum": "722480528"
+				}
+			},
+			"x64": {
+				"basic": {
+					"fn": "instantclient-basic-windows.x64-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/nt/instantclient/121020/instantclient-basic-windows.x64-12.1.0.2.0.zip",
+					"cksum": "1751087003"
+				},
+				"sdk": {
+					"fn": "instantclient-sdk-windows.x64-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/nt/instantclient/121020/instantclient-sdk-windows.x64-12.1.0.2.0.zip",
+					"cksum": "1448203088"
+				}
+			}
+		},
+		"darwin": {
+			"ia32": {
+				"basic": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				},
+				"sdk": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				}
+			},
+			"x64": {
+				"basic": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				},
+				"sdk": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				}
+			}
+		},
+		"linux": {
+			"ia32": {
+				"basic": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				},
+				"sdk": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				}
+			},
+			"x64": {
+				"basic": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				},
+				"sdk": {
+					"fn": "",
+					"url": "",
+					"cksum": ""
+				}
+			}
+		}
+	}
+}
