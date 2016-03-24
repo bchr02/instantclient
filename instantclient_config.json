@@ -1,7 +1,7 @@
 {
 	"folder": "instantclient",
 	"defaultversion": "v12",
-		"v12": {
+	"v12": {
 		"win32": {
 			"ia32": {
 				"basic": {
@@ -31,25 +31,25 @@
 		"darwin": {
 			"ia32": {
 				"basic": {
-					"fn": "",
-					"url": "",
+					"fn": "instantclient-basic-macos.x32-11.2.0.4.0.zip",
+					"url": "http://download.oracle.com/otn/mac/instantclient/11204/instantclient-basic-macos.x32-11.2.0.4.0.zip",
 					"cksum": ""
 				},
 				"sdk": {
-					"fn": "",
-					"url": "",
+					"fn": "instantclient-sdk-macos.x32-11.2.0.4.0.zip",
+					"url": "http://download.oracle.com/otn/mac/instantclient/11204/instantclient-sdk-macos.x32-11.2.0.4.0.zip",
 					"cksum": ""
 				}
 			},
 			"x64": {
 				"basic": {
-					"fn": "",
-					"url": "",
+					"fn": "instantclient-basic-macos.x64-11.2.0.4.0.zip",
+					"url": "http://download.oracle.com/otn/mac/instantclient/11204/instantclient-basic-macos.x64-11.2.0.4.0.zip",
 					"cksum": ""
 				},
 				"sdk": {
-					"fn": "",
-					"url": "",
+					"fn": "instantclient-sdk-macos.x64-11.2.0.4.0.zip",
+					"url": "http://download.oracle.com/otn/mac/instantclient/11204/instantclient-sdk-macos.x64-11.2.0.4.0.zip",
 					"cksum": ""
 				}
 			}
@@ -57,26 +57,26 @@
 		"linux": {
 			"ia32": {
 				"basic": {
-					"fn": "",
-					"url": "",
-					"cksum": ""
+					"fn": "instantclient-basic-linux-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/linux/instantclient/121020/instantclient-basic-linux-12.1.0.2.0.zip",
+					"cksum": "4042584362"
 				},
 				"sdk": {
-					"fn": "",
-					"url": "",
-					"cksum": ""
+					"fn": "instantclient-sdk-linux-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/linux/instantclient/121020/instantclient-sdk-linux-12.1.0.2.0.zip",
+					"cksum": "1486876569"
 				}
 			},
 			"x64": {
 				"basic": {
-					"fn": "",
-					"url": "",
-					"cksum": ""
+					"fn": "instantclient-basic-linux.x64-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/linux/instantclient/121020/instantclient-basic-linux.x64-12.1.0.2.0.zip",
+					"cksum": "109893216"
 				},
 				"sdk": {
-					"fn": "",
-					"url": "",
-					"cksum": ""
+					"fn": "instantclient-sdk-linux.x64-12.1.0.2.0.zip",
+					"url": "http://download.oracle.com/otn/linux/instantclient/121020/instantclient-sdk-linux.x64-12.1.0.2.0.zip",
+					"cksum": "1047596065"
 				}
 			}
 		}
