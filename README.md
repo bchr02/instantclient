@@ -21,7 +21,7 @@ If you wish, you could set this command line tool to automatically install by ed
 This could be useful if you wish to automatically give people this tool upon installation of your own program.
 
 ## Bootstrap for node-oracledb
-Add the following four lines to your app:
+First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following four lines to your app:
 ```shell
 process.env['ORACLE_HOME'] = path.join(__dirname, '../instantclient');
 process.env['OCI_LIB_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/lib/msvc');
