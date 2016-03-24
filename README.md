@@ -43,7 +43,7 @@ process.env['PATH'] = process.env.ORACLE_HOME + ';' + process.env['PATH'];
 
 ## Alternative Setup
 If you wish, you could set this command line tool to automatically install by editing the scripts object of your package.json to include a preinstall section like so:
-```shell
+```json
 "scripts": {
   "preinstall": "npm i -g instantclient"
 }
