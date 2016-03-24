@@ -1,8 +1,20 @@
 {
   "name": "instantclient",
   "version": "0.0.1",
-  "description": "Easy Install of Oracle Instant Client Basic and SDK",
+  "description": "A Node.js command line tool for downloading and installing Oracle Instant Client Packages (Basic and SDK).",
   "main": "instantclient.js",
+  "keywords": [
+    "Oracle",
+    "oracledb",
+    "InstantClient",
+    "Instant",
+    "Client",
+    "Node.js",
+    "plugin",
+    "tool",
+    "Database",
+    "SQL"
+  ],
   "dependencies": {
     "cheerio": "^0.20.0",
     "decompress": "^3.0.0",
