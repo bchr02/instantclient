@@ -34,7 +34,7 @@ instantclient-basic-nt-12.1.0.2.0.zip deleted
 
 ## Bootstrap for node-oracledb
 First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following four lines to your app:
-```shell
+```javascript
 process.env['ORACLE_HOME'] = path.join(__dirname, '../instantclient');
 process.env['OCI_LIB_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/lib/msvc');
 process.env['OCI_INC_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/sdk/include');
