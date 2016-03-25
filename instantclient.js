@@ -7,7 +7,7 @@ var fs			= require("fs");
 var Readline	= require('readline');
 var ic_config	= require('./instantclient_config.json');
 var ic_packages	= ['basic','sdk'];
-var dir			= process.cwd() + '\\' + ic_config.folder;
+var dir			= path.join(process.cwd(), ic_config.folder);
 var username;
 var password;
 var oam_req;
@@ -102,7 +102,7 @@ var credentialsPrompt = function(){
 				}
 			});
 		};
-	
+
 	console.log('');
 	console.log('You must have an Oracle Account to continue.');
 	console.log('You can register for a free account here: https://profile.oracle.com/myprofile/account/create-account.jspx');
@@ -181,7 +181,7 @@ var createFolder = function() {
 				ic_packages.forEach(function(pkg){downloadPkg(pkg);});
 			});
 		};
-	
+
 	if(fs.existsSync(dir)){
 		console.log('');
 		console.log('Directory (' + ic_config.folder + ') already exists!');
@@ -207,10 +207,10 @@ var createFolder = function() {
 var downloadPkg = function(pkg) {
 	var fileObj			= ic_config[ic_config.defaultversion][process.platform][process.arch][pkg];
 	var fn				= fileObj.fn;
-	var fullPathToFile	= dir + '\\' + fn;
+	var fullPathToFile	= path.join(dir, fn);
 	var url				= ic_config[ic_config.defaultversion][process.platform][process.arch][pkg].url;
 	var fileStream		= fs.createWriteStream(fullPathToFile);
-	
+
 	request({
 			url: url,
 			method: 'GET',
