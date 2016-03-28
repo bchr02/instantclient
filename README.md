@@ -40,6 +40,7 @@ process.env['OCI_LIB_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/lib/msvc')
 process.env['OCI_INC_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/sdk/include');
 process.env['PATH'] = process.env.ORACLE_HOME + ';' + process.env['PATH'];
 ```
+***The above will not work when needing to build node-oracledb from source, only if it is precompiled. I have submitted pull request https://github.com/oracle/node-oracledb/pull/393 to automatically include and run this module when installing node-oracledb. Within that pull request, I have added logic to the binding.gyp that will look for an instantclient folder even when needing to build from source.***
 
 ## Alternative Setup
 If you wish, you could set this command line tool to automatically install by editing the scripts object of your package.json to include a preinstall section like so:
