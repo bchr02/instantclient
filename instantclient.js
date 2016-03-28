@@ -58,6 +58,19 @@ var deleteFolderRecursive = function(path) {
 var request = require('request');
 var j = request.jar();
 
+var beginPrompt = function(){
+	console.log('');
+	console.log('Would you like to install the Oracle Instant Client files?');
+	rl_open();
+	rl.question('Press (Y) to Install, anything else to Cancel? ', function(answer) {
+		rl.close();
+		if(answer != 'Y' && answer != 'y') {
+			return;
+		}
+		agreementPrompt();
+	});
+};
+
 var agreementPrompt = function(){
 	console.log('');
 	console.log('You must accept the OTN Development and Distribution License Agreement for Instant Client to download this software.');
@@ -261,4 +274,4 @@ var downloadPkg = function(pkg) {
 	});
 };
 
-agreementPrompt();
+beginPrompt();

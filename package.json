@@ -1,6 +1,6 @@
 {
   "name": "instantclient",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A Node.js command line tool for downloading and installing Oracle Instant Client Packages (Basic and SDK).",
   "main": "instantclient.js",
   "keywords": [
