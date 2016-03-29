@@ -1,4 +1,4 @@
-# instantclient v0.0.6
+# instantclient v0.0.7
 > A Node.js command line tool for downloading and installing Oracle Instant Client Packages (Basic and SDK).
 
 This tool helps to automate the downloading and extracting of the correct Oracle Instant Client Basic and SDK Packages based on the  Operating System and Processor Architecture your running on. You must have an Oracle Account to use it and accept the [OTN Development and Distribution License Agreement for Instant Client](http://www.oracle.com/technetwork/licenses/instant-client-lic-152016.html). This is needed because all of the files come directly from Oracle. You can register for a free account [here](https://profile.oracle.com/myprofile/account/create-account.jspx). 
@@ -33,20 +33,9 @@ instantclient-basic-nt-12.1.0.2.0.zip deleted
 ```
 
 ## Bootstrap for node-oracledb
-First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following four lines to your app:
+First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following lines to your app:
 ```javascript
-process.env['ORACLE_HOME'] = path.join(__dirname, '../instantclient');
-process.env['OCI_LIB_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/lib/msvc');
-process.env['OCI_INC_DIR'] = path.join(process.env.ORACLE_HOME, '/sdk/sdk/include');
-process.env['PATH'] = process.env.ORACLE_HOME + ';' + process.env['PATH'];
+var path = require('path');
+process.env['PATH'] = path.join(__dirname, '../instantclient') + ';' + process.env['PATH'];
 ```
-***The above will not work when needing to build node-oracledb from source, only if it is precompiled. I have submitted pull request https://github.com/oracle/node-oracledb/pull/393 to automatically include and run this module when installing node-oracledb. Within that pull request, I have added logic to the binding.gyp that will look for an instantclient folder even when needing to build from source.***
-
-## Alternative Setup
-If you wish, you could set this command line tool to automatically install by editing the scripts object of your package.json to include a preinstall section like so:
-```json
-"scripts": {
-  "preinstall": "npm i -g instantclient"
-}
-```
-This could be useful if you wish to automatically give people this tool upon installation of your own program.
+The above will work to ensure that the instantclient folder appears first in the PATH environment variable every time node-oracledb is being used, ***however, you must set the OCI_LIB_DIR and OCI_INC_DIR environment variables manually in your environment when first installing node-oracledb. This is because they are needed for the compiling of the module.***
