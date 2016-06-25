@@ -1,6 +1,6 @@
 {
   "name": "instantclient",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A Node.js command line tool for downloading and installing Oracle Instant Client Packages (Basic and SDK).",
   "main": "instantclient.js",
   "keywords": [
@@ -26,6 +26,7 @@
     "instantclient": "instantclient.js"
   },
   "scripts": {
+	"install": "cd../.. && instantclient && npm uninstall instantclient",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bill Christo",

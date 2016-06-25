@@ -1,19 +1,17 @@
-# instantclient v0.0.7
+# instantclient v1.0.0
 > A Node.js command line tool for downloading and installing Oracle Instant Client Packages (Basic and SDK).
 
 This tool helps to automate the downloading and extracting of the correct Oracle Instant Client Basic and SDK Packages based on the  Operating System and Processor Architecture your running on. You must have an Oracle Account to use it and accept the [OTN Development and Distribution License Agreement for Instant Client](http://www.oracle.com/technetwork/licenses/instant-client-lic-152016.html). This is needed because all of the files come directly from Oracle. You can register for a free account [here](https://profile.oracle.com/myprofile/account/create-account.jspx). 
 
-## Install
-```shell
-npm install -g instantclient
-```
-
 ## Instructions
-From the command prompt, navigate to the directory where you would like the instantclient folder placed and run ```instantclient```. Now just follow the prompts.
+From the command prompt, navigate to the directory where you would like the instantclient folder placed. Then run ```npm install instantclient```. Finally, just follow the prompts. After the instantclient files are downloaded and extracted the instantclient npm installer is uninstalled. Therefore, you won't have any remnants of it in your node_modules folder.
 
 **For Example:**
 ```shell
-C:\nodeapps\app>instantclient
+C:\nodeapps\app>npm install instantclient
+
+Would you like to install the Oracle Instant Client files?
+Press (Y) to Install, anything else to Cancel? y
 
 You must accept the OTN Development and Distribution License Agreement for Instant Client to download this software.
 URL to Agreement: http://www.oracle.com/technetwork/licenses/instant-client-lic-152016.html
