@@ -31,9 +31,10 @@ instantclient-basic-nt-12.1.0.2.0.zip deleted
 ```
 
 ## Bootstrap for node-oracledb
-First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following lines to your app:
+First, using the above instructions, install the instantclient folder to the root folder of your program. Now just add the following lines to your app in the order provided:
 ```javascript
 var path = require('path');
-process.env['PATH'] = path.join(__dirname, '../instantclient') + ';' + process.env['PATH'];
+process.env['PATH'] = path.join(__dirname, '/instantclient') + ';' + process.env['PATH'];
+var oracledb = require('oracledb');
 ```
 The above will work to ensure that the instantclient folder appears first in the PATH environment variable every time node-oracledb is being used, ***however, you must set the OCI_LIB_DIR and OCI_INC_DIR environment variables manually in your environment when first installing node-oracledb. This is because they are needed for the compiling of the module.***
