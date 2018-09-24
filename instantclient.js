@@ -10,7 +10,11 @@ var ic_packages	= ['basic','sdk'];
 var dir			= path.join(process.cwd(), ic_config.folder);
 var username;
 var password;
-var oam_req;
+var form_v;
+var form_request_id;
+var form_oam_req;
+var form_site2pstoretoken;
+var form_locale;
 var $;
 var rl;
 
@@ -142,8 +146,11 @@ var get_oam = function(cb){
 		function callback(error, response, body) {
 			if (!error) {
 				$ = Cheerio.load(body);
-				oam_req = $('input[name="OAM_REQ"]').val();
-				//console.log(oam_req);
+				form_v = $('input[name="v"]').val();
+				form_request_id = $('input[name="request_id"]').val();
+				form_oam_req = $('input[name="OAM_REQ"]').val();
+				form_site2pstoretoken = $('input[name="site2pstoretoken"]').val();
+				form_locale = $('input[name="locale"]').val();
 				cb();
 			}
 			else {
@@ -170,9 +177,13 @@ var loginRequest = function() {
 			jar: j,
 			followAllRedirects: true,
 			form: {
+				'v': form_v,
+				'request_id': form_request_id,
 				'ssousername': username,
 				'password': password,
-				'OAM_REQ': oam_req
+				'OAM_REQ': form_oam_req,
+				'site2pstoretoken': form_site2pstoretoken,
+				'locale': form_locale
 			}
 		},
 		function callback(error, response, body) {
@@ -241,7 +252,7 @@ var downloadPkg = function(pkg) {
 			form: {
 				'ssousername': username,
 				'password': password,
-				'OAM_REQ': oam_req
+				'OAM_REQ': form_oam_req
 			}
 		},
 		function callback(error, response, body) {
